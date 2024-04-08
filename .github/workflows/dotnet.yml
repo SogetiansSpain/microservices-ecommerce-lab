@@ -23,9 +23,9 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish
-      run: dotnet publish ECommerce.sln -c Release -o release — nologo
+      run: dotnet publish ECommerce.Api.Products/ECommerce.Api.Products.csproj -c Release -o release — nologo
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: Artifact API
-        path: /home/runner/work/ECommerce/release/
+        path: /home/runner/work/ECommerce.Api.Products/ECommerce.Api.Products/release/
